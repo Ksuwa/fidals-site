@@ -1,0 +1,297 @@
+// ================================================================
+// Imports
+// ================================================================
+@import "reset.scss";
+@import "../libs/bootstrap.scss";
+@import "variables.scss";
+@import "mixins/mixins.scss";
+@import "mixins/placeholders.scss";
+@import "../libs/jquery.mmenu.scss";
+
+// ================================================================
+// Vars
+// ================================================================
+$header-height : 75px;
+$footer-height : 305px;
+
+// ================================================================
+// Common
+// ================================================================
+html, body, .mm-page {
+	height: 100%;
+}
+
+body {
+	background: $c-grey-background;
+	font-family: "Open Sans", sans-serif;
+}
+
+.page-wrapper {
+	min-height: 100%;
+	margin-bottom: -$footer-height;
+}
+
+.page-wrapper:after {
+	content: "";
+	display: block;
+}
+
+.footer,
+.page-wrapper:after {
+	// "push" must be the same height as footer
+	height: $footer-height;
+}
+
+.text-title {
+	@extend %title-border;
+
+	&-wrapper {
+		margin-bottom: 50px;
+		text-align: center;
+	}
+}
+
+// ================================================================
+// Header
+// ================================================================
+.header {
+	background: $c-black;
+	color: $c-white;
+	margin: 0 0 50px;
+	min-height: $header-height;
+
+	&-inner {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	&-toggle-menu {
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC') no-repeat center rgba(0, 0, 0, 0.5);
+		border-radius: 50%;
+		display: block;
+		height: 40px;
+		left: 10px;
+		position: absolute;
+		top: 11px;
+		width: 40px;
+	}
+
+	&-nav,
+	&-logo-link {
+		float: left;
+	}
+
+	&-logo-link {
+		margin: 0 70px 0 0;
+		padding: 10px 0;
+		width: 55px;
+	}
+
+	&-nav {
+		margin: 0;
+		max-height: $header-height;
+		text-align: justify;
+		width: 60%;
+
+		&:after {
+			content: "";
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+	&-nav-item {
+		display: inline-block;
+		height: $header-height;
+		vertical-align: top;
+	}
+
+	&-nav-link {
+		color: $c-nav-link;
+		display: block;
+		height: 100%;
+		padding: 27px 20px;
+		-webkit-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+
+		&:hover {
+			background: $c-nav-link-bg;
+			color: $c-white;
+			text-decoration: none;
+		}
+	}
+
+	&-contacts {
+		float: right;
+		width: 22%;
+
+		&-text {
+			margin: 13px 0 7px;
+			text-align: center;
+		}
+
+		&-phone {
+			float: left;
+		}
+
+		&-email {
+			float: right;
+		}
+
+		&-link {
+			color: $c-nav-link;
+		}
+
+		&-link:hover {
+			color: $c-white;
+			text-decoration: none;
+		}
+	}
+
+	&-container {
+		height: 100%;
+	}
+
+	@media screen and (max-width: 991px) {
+		&-logo {
+			float: right;
+			left: 50%;
+			margin-left: -95px;
+			position: absolute;
+		}
+	}
+
+	@media screen and (min-width: 992px) {
+		&-toggle-menu {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.toggleMenu {
+		display: block;
+	}
+}
+
+// ================================================================
+// Footer
+// ================================================================
+.footer {
+	background: $c-footer-bg;
+	color: $c-footer-text-color;
+
+	&-item-title {
+		border-bottom: 1px solid $c-grey-title-border;
+		padding: 0 0 20px;
+	}
+
+	&-link {
+		@extend %list-item-circle;
+		color: $c-green-links;
+
+		&:hover {
+			color: $c-green-links;
+		}
+	}
+
+	&-inner {
+		border-bottom: 1px solid $c-grey-title-border;
+		padding: 15px 0;
+	}
+
+	&-copyright {
+		padding: 20px 0;
+	}
+}
+
+// ================================================================
+// Skills section
+// ================================================================
+.skills {
+	@extend %section-border;
+
+	&-item {
+		@extend %box-grey;
+	}
+
+	&-item-title {
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	&-list-item {
+		@extend %list-item-circle;
+	}
+}
+
+// ================================================================
+// Skills section
+// ================================================================
+.speech {
+	@extend %section-border;
+
+	&-img-wrapper {
+		float: left;
+		margin: 0 25px 10px 0;
+	}
+
+	&-title {
+		font-weight: bold;
+		margin-top: 0;
+	}
+
+	&-item {
+		margin-bottom: 40px;
+	}
+
+	&-text {
+		line-height: 160%;
+	}
+
+	@include dev(pc) {
+		.col-md-6:last-child .speech-item,
+		.col-md-6:nth-last-child(2) .speech-item {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// ================================================================
+// Infographic section
+// ================================================================
+.infographic {
+	@extend %section-border;
+}
+
+// ================================================================
+// Infographic section
+// ================================================================
+.prices {
+	@extend %section-border;
+
+	&-img-wrapper {
+		float: left;
+		margin: 0 25px 10px 0;
+	}
+}
+
+// ================================================================
+// Portfolio section
+// ================================================================
+.portfolio {
+	margin-bottom: 50px;
+
+	&-item-title {
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	&-img-wrapper {
+		margin: 0 0 10px;
+	}
+
+	&-list-item {
+		@extend %list-item-circle;
+	}
+}

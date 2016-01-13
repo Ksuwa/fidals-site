@@ -1,0 +1,281 @@
+doctype html
+html
+	head
+		block meta
+			meta(charset='utf-8')
+			meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+			- var title = title || "FidAls"
+			title #{title}
+
+			meta(name='description', content='')
+			meta(name='viewport', content='width=device-width, initial-scale=1')
+
+		block styles
+			link(href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+			link(rel='stylesheet', href='css/styles.css')
+
+	body
+		.page-wrapper
+			.header
+				block header
+					.container.header-container
+						a(class="header-toggle-menu", href="#menu")
+						nav#menu
+							ul
+								li
+									a(href='#') Home
+								li
+									a(href='#about') About us
+									ul
+										li
+											a(href='#about/history') History
+										li
+											a(href='#about/team') The team
+											ul
+												li
+													a(href='#about/team/management') Management
+												li
+													a(href='#about/team/sales') Sales
+												li
+													a(href='#about/team/development') Development
+										li
+											a(href='#about/address') Our address
+								li
+									a(href='#contact') Contact
+
+						a(class="header-logo-link", href="/", rel="nofollow")
+							img(class="img-responsive" src="/images/logo.jpg" alt="FidAls" title="На главную")
+
+						ul.header-nav.list-unstyled
+							li.header-nav-item
+								a(class="header-nav-link", href="#") Портфолио
+							li.header-nav-item
+								a(class="header-nav-link", href="#") Цены
+							li.header-nav-item
+								a(class="header-nav-link", href="#") Команда
+							li.header-nav-item
+								a(class="header-nav-link", href="#") Вакансии
+							li.header-nav-item
+								a(class="header-nav-link", href="#") Блог
+
+						.header-contacts
+							p.header-contacts-text Контакты
+							p.header-contacts-phone
+								a(class="header-contacts-link" href="tel:+77777777777") +7 (000) 000-00-00
+							p.header-contacts-email
+								a(class="header-contacts-link" href="mailto:info@fidals.ru") info@fidals.ru
+
+			.content
+				block content
+					.container
+						.skills
+							.row
+								.col-md-4
+									.skills-item
+										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
+										h4.skills-item-title Разрабатываем ТЗ
+										ul.skills-list.list-unstyled
+											li.skills-list-item Lorem
+											li.skills-list-item Ipsum
+											li.skills-list-item Samet
+											li.skills-list-item Maloq
+											li.skills-list-item Gist
+								.col-md-4
+									.skills-item
+										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
+										h4.skills-item-title Реализуем проекты на Symfony
+										ul.skills-list.list-unstyled
+											li.skills-list-item Lorem
+											li.skills-list-item Ipsum
+											li.skills-list-item Samet
+											li.skills-list-item Maloq
+											li.skills-list-item Gist
+								.col-md-4
+									.skills-item
+										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
+										h4.skills-item-title Создаём бизнесс-процессы
+										ul.skills-list.list-unstyled
+											li.skills-list-item Lorem
+											li.skills-list-item Ipsum
+											li.skills-list-item Samet
+											li.skills-list-item Maloq
+											li.skills-list-item Gist
+
+						.speech
+							.row
+								.col-md-6
+									.speech-item.clearfix
+										.speech-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.speech-title Программистам
+										p.speech-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fugiat deleniti rem rerum veritatis. Unde ad, iste a repellat autem numquam voluptatum dolorum veniam. Qui rerum at ullam? Expedita, nostrum?
+								.col-md-6
+									.speech-item.clearfix
+										.speech-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.speech-title Малому бизнесу
+										p.speech-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+								.col-md-6
+									.speech-item.clearfix
+										.speech-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.speech-title Коллегам - студии, dev-teams
+										p.speech-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+								.col-md-6
+									.speech-item.clearfix
+										.speech-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.speech-title Стартапам
+										p.speech-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+								.col-md-6
+									.speech-item.clearfix
+										.speech-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.speech-title Инвесторам
+										p.speech-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+								.col-md-6
+									.speech-item.clearfix
+										.speech-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.speech-title Поддержка - готовым проектам
+										p.speech-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+
+						.infographic
+							img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Инфографика&w=1140&h=200")
+
+						.prices
+							.text-title-wrapper
+								h2.prices-title.text-title.text-center Цены
+								h4.prices-subtitle.text-center откуда берутся и как мы их считаем
+							.row
+								.col-md-6
+									.prices-item
+										.prices-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.prices-item-title Программистам
+										p.prices-item-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fugiat deleniti rem rerum veritatis. Unde ad, iste a repellat autem numquam voluptatum dolorum veniam. Qui rerum at ullam? Expedita, nostrum?
+								.col-md-6
+									.prices-item
+										.prices-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.prices-item-title Малому бизнесу
+										p.prices-item-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+								.col-md-6
+									.prices-item
+										.prices-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.prices-item-title Коллегам - студии, dev-teams
+										p.prices-item-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+								.col-md-6
+									.prices-item
+										.prices-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.prices-item-title Стартапам
+										p.prices-item-text
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
+
+						.portfolio
+							.text-title-wrapper
+								h2.portfolio-title.text-title.text-center Портфолио
+
+							.row
+								.col-md-4
+									.portfolio-item
+										.portfolio-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.portfolio-item-title stroyprombeton
+										ul.portfolio-list.list-unstyled
+											li.portfolio-list-item Хоп
+											li.portfolio-list-item Хэй
+											li.portfolio-list-item Ла-ла
+											li.portfolio-list-item Лэй
+
+								.col-md-4
+									.portfolio-item
+										.portfolio-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.portfolio-item-title Магазин элементов питания
+										ul.portfolio-list.list-unstyled
+											li.portfolio-list-item Питания
+											li.portfolio-list-item Элементов
+											li.portfolio-list-item Магазин
+
+								.col-md-4
+									.portfolio-item
+										.portfolio-img-wrapper
+											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+										h4.portfolio-item-title Металл
+										ul.portfolio-list.list-unstyled
+											li.portfolio-list-item Рэп - это кал
+											li.portfolio-list-item Слушай металл
+
+		.footer
+			block footer
+				.footer-inner
+					.container
+						.row
+							.col-md-3
+								.footer-item
+									h4.footer-item-title Как работать
+									ul.footer-list.list-unstyled
+										li.footer-list-item
+											a(class="footer-link" href="#") Порядок оплаты
+										li.footer-list-item
+											a(class="footer-link" href="#") Почасовая оплата
+										li.footer-list-item
+											a(class="footer-link" href="#") Пример договора
+
+							.col-md-3
+								.footer-item
+									h4.footer-item-title Портфолио
+									ul.footer-list.list-unstyled
+										li.footer-list-item
+											a(class="footer-link" href="#") stroyprombeton
+										li.footer-list-item
+											a(class="footer-link" href="#") Магазин элементов питания
+										li.footer-list-item
+											a(class="footer-link" href="#") Металл
+
+							.col-md-3
+								.footer-item
+									h4.footer-item-title Чем занимаемся
+									ul.footer-list.list-unstyled
+										li.footer-list-item
+											a(class="footer-link" href="#") Программистам
+										li.footer-list-item
+											a(class="footer-link" href="#") Малому бизнессу
+										li.footer-list-item
+											a(class="footer-link" href="#") Стартапам
+										li.footer-list-item
+											a(class="footer-link" href="#") Коллегам
+										li.footer-list-item
+											a(class="footer-link" href="#") Поддержка
+
+							.col-md-3
+								.footer-item
+									h4.footer-item-title Как работать
+									ul.footer-list.list-unstyled
+										li.footer-list-item
+											a(class="footer-link" href="#") Команда
+										li.footer-list-item
+											a(class="footer-link" href="#") Вакансии
+										li.footer-list-item
+											a(class="footer-link" href="#") Фото офиса
+
+				.footer-copyright.text-center © FidAls 2016
+		block scripts
+			script(src='https://code.jquery.com/jquery-2.2.0.min.js')
+			script window.jQuery || document.write('<script src="js/libs/jquery-2.2.0.min.js"><\/script>')
+			script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+			script(src='js/libs/jquery.mmenu.min.all.js')
+			script(src='js/common/main.js')

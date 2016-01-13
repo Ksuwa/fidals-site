@@ -1,0 +1,34 @@
+// ================================================================
+// Placeholders
+// ================================================================
+%box-grey {
+	@include trans;
+	background: $c-box-bg;
+	border: 1px solid $c-box-border;
+	padding: 20px 20px 10px;
+}
+
+%section-border {
+	border-bottom: 1px solid $c-section-border;
+	margin-bottom: 60px;
+	padding-bottom: 60px;
+}
+
+%title-border {
+	display: inline-block;
+	position: relative;
+
+	&:after {
+		background-color: $c-title-border;
+		content: '';
+		display: block;
+		height: 3px;
+		margin: 13px auto 15px;
+	}
+}
+
+%list-item-circle {
+	display: list-item;
+	list-style: circle inside;
+	padding: 5px 0;
+}
