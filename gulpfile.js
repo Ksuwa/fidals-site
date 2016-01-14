@@ -162,8 +162,7 @@ gulp.task('connect', function() {
 // ================================================================
 gulp.task("watch", function() {
 	gulp.watch( jade_file, ["jade"] );
-	gulp.watch( sass_file, ["sass"] );
-	gulp.watch( css_file,  ["css"]  );
+	gulp.watch( sass_file, ["styles"] );
 	gulp.watch( src_js_folder + "**/*", ["js"] );
 });
 

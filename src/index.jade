@@ -1,3 +1,7 @@
+block vars
+	- var title = "FidAls | Могём";
+	- var bodyClass = "";
+
 doctype html
 html
 	head
@@ -5,7 +9,6 @@ html
 			meta(charset='utf-8')
 			meta(http-equiv='X-UA-Compatible', content='IE=edge')
 
-			- var title = title || "FidAls"
 			title #{title}
 
 			meta(name='description', content='')
@@ -15,7 +18,7 @@ html
 			link(href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic', rel='stylesheet', type='text/css')
 			link(rel='stylesheet', href='css/styles.css')
 
-	body
+	body(class="#{bodyClass}")
 		.page-wrapper
 			.header
 				block header
@@ -24,32 +27,40 @@ html
 						nav#menu
 							ul
 								li
-									a(href='#') Home
+									a(href='/') Главная
 								li
-									a(href='#about') About us
+									a(href='./portfolio') Портфолио
+								li
+									a(href='#') Цены
+								li
+									a(href='#') Команда
 									ul
 										li
-											a(href='#about/history') History
+											a(href='#') История
 										li
-											a(href='#about/team') The team
+											a(href='#') Члены команды
 											ul
 												li
-													a(href='#about/team/management') Management
+													a(href='#') Руководитель
 												li
-													a(href='#about/team/sales') Sales
+													a(href='#') Менеджер проектов
 												li
-													a(href='#about/team/development') Development
+													a(href='#') Сантехник
 										li
-											a(href='#about/address') Our address
+											a(href='#') Фото офиса
 								li
-									a(href='#contact') Contact
+									a(href='#') Вакансии
+								li
+									a(href='#') Блог
+								li
+									a(href='#') Контакты
 
 						a(class="header-logo-link", href="/", rel="nofollow")
 							img(class="img-responsive" src="/images/logo.jpg" alt="FidAls" title="На главную")
 
 						ul.header-nav.list-unstyled
 							li.header-nav-item
-								a(class="header-nav-link", href="#") Портфолио
+								a(class="header-nav-link", href="./portfolio.html") Портфолио
 							li.header-nav-item
 								a(class="header-nav-link", href="#") Цены
 							li.header-nav-item
@@ -58,9 +69,10 @@ html
 								a(class="header-nav-link", href="#") Вакансии
 							li.header-nav-item
 								a(class="header-nav-link", href="#") Блог
+							li.header-nav-item
+								a(class="header-nav-link", href="./contacts.html") Контакты
 
 						.header-contacts
-							p.header-contacts-text Контакты
 							p.header-contacts-phone
 								a(class="header-contacts-link" href="tel:+77777777777") +7 (000) 000-00-00
 							p.header-contacts-email
@@ -71,7 +83,7 @@ html
 					.container
 						.skills
 							.row
-								.col-md-4
+								.col-sm-4
 									.skills-item
 										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
 										h4.skills-item-title Разрабатываем ТЗ
@@ -81,7 +93,7 @@ html
 											li.skills-list-item Samet
 											li.skills-list-item Maloq
 											li.skills-list-item Gist
-								.col-md-4
+								.col-sm-4
 									.skills-item
 										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
 										h4.skills-item-title Реализуем проекты на Symfony
@@ -91,7 +103,7 @@ html
 											li.skills-list-item Samet
 											li.skills-list-item Maloq
 											li.skills-list-item Gist
-								.col-md-4
+								.col-sm-4
 									.skills-item
 										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
 										h4.skills-item-title Создаём бизнесс-процессы
@@ -273,6 +285,7 @@ html
 											a(class="footer-link" href="#") Фото офиса
 
 				.footer-copyright.text-center © FidAls 2016
+
 		block scripts
 			script(src='https://code.jquery.com/jquery-2.2.0.min.js')
 			script window.jQuery || document.write('<script src="js/libs/jquery-2.2.0.min.js"><\/script>')

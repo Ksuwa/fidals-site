@@ -12,7 +12,7 @@
 // Vars
 // ================================================================
 $header-height : 75px;
-$footer-height : 305px;
+$footer-height : 310px;
 
 // ================================================================
 // Common
@@ -66,13 +66,13 @@ body {
 	}
 
 	&-toggle-menu {
-		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC') no-repeat center rgba(0, 0, 0, 0.5);
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC') no-repeat center;
 		border-radius: 50%;
 		display: block;
 		height: 40px;
 		left: 10px;
 		position: absolute;
-		top: 11px;
+		top: 16px;
 		width: 40px;
 	}
 
@@ -123,19 +123,13 @@ body {
 
 	&-contacts {
 		float: right;
-		width: 22%;
-
-		&-text {
-			margin: 13px 0 7px;
-			text-align: center;
-		}
+		padding: 10px 0 0;
+		text-align: right;
 
 		&-phone {
-			float: left;
 		}
 
 		&-email {
-			float: right;
 		}
 
 		&-link {
@@ -152,25 +146,34 @@ body {
 		height: 100%;
 	}
 
-	@media screen and (max-width: 991px) {
+	@include dev(mob) {
+		&-logo-link {
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	@include bp(max-width, 991px) {
 		&-logo {
 			float: right;
 			left: 50%;
 			margin-left: -95px;
 			position: absolute;
 		}
-	}
 
-	@media screen and (min-width: 992px) {
-		&-toggle-menu {
+		&-nav {
 			display: none;
 		}
 	}
-}
 
-@media screen and (max-width: 990px) {
-	.toggleMenu {
-		display: block;
+	@include bp(min-width, 992px) {
+		&-toggle-menu {
+			display: none;
+		}
 	}
 }
 
@@ -188,10 +191,33 @@ body {
 
 	&-link {
 		@extend %list-item-circle;
+		border-bottom: 1px solid transparent;
 		color: $c-green-links;
+		display: inline-block;
+		position: relative;
+
+		&:after {
+			@include trans;
+			background: $c-green-links;
+			bottom: 0;
+			content: "";
+			height: 1px;
+			left: 0;
+			position: absolute;
+			width: 0;
+		}
 
 		&:hover {
 			color: $c-green-links;
+			text-decoration: none;
+		}
+
+		&:hover:after {
+			width: 100%;
+		}
+
+		&.active {
+
 		}
 	}
 
@@ -216,17 +242,23 @@ body {
 	}
 
 	&-item-title {
-		font-weight: bold;
-		margin-top: 15px;
+		@extend %box-title;
 	}
 
 	&-list-item {
 		@extend %list-item-circle;
 	}
+
+	@include dev(mob) {
+		&-item {
+			margin: 0 auto 35px;
+			max-width: 320px;
+		}
+	}
 }
 
 // ================================================================
-// Skills section
+// Speech section
 // ================================================================
 .speech {
 	@extend %section-border;
@@ -283,8 +315,7 @@ body {
 	margin-bottom: 50px;
 
 	&-item-title {
-		font-weight: bold;
-		margin-top: 15px;
+		@extend %box-title;
 	}
 
 	&-img-wrapper {

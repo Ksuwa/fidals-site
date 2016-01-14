@@ -1,12 +1,17 @@
 $(function () {
-	console.log('It\'s ok. I\'m the main JS file...');
 
+	/**
+	 * Плагин меню для мобильных устройств.
+	 */
 	$('#menu').mmenu({
 		extensions	: [ 'effect-slide-menu', 'pageshadow' ],
-		searchfield	: true,
+		searchfield	: {
+			placeholder : "Поиск",
+			search      : true
+		},
 		counters	: true,
 		navbar 		: {
-			title : 'Advanced menu'
+			title : 'Меню'
 		},
 		navbars		: [
 			{
@@ -18,11 +23,6 @@ $(function () {
 					'prev',
 					'title',
 					'close'
-				]
-			}, {
-				position : 'bottom',
-				content	 : [
-					'<a href="http://mmenu.frebsite.nl/wordpress-plugin.html" target="_blank">WordPress plugin</a>'
 				]
 			}
 		]
