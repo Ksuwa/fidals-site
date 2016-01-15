@@ -8,10 +8,28 @@
 	padding: 20px 20px 10px;
 }
 
+%box-transparent {
+	@include trans;
+	border: 1px solid $c-box-border;
+	padding: 20px 20px 10px;
+}
+
 %box-title {
 	font-weight: bold;
 	line-height: 160%;
 	margin-top: 15px;
+}
+
+%list-flex {
+	display: -webkit-flex;
+	display: 		 flex;
+	-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+}
+
+%list-flex-col {
+	display: -webkit-flex;
+	display: 		 flex;
 }
 
 %section-border {

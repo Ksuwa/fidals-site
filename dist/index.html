@@ -11,9 +11,9 @@
   </head>
   <body>
     <div class="page-wrapper">
-      <div class="header">
+      <div id="header" class="header">
         <div class="container header-container"><a href="#menu" class="header-toggle-menu"></a>
-          <nav id="menu">
+          <nav id="menu" style="display: none">
             <ul>
               <li><a href="/">Главная</a></li>
               <li><a href="./portfolio">Портфолио</a></li>
@@ -35,7 +35,7 @@
               <li><a href="#">Блог</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
-          </nav><a href="/" rel="nofollow" class="header-logo-link"><img src="/images/logo.jpg" alt="FidAls" title="На главную" class="img-responsive"></a>
+          </nav><a href="/" rel="nofollow" class="header-logo-link"><img src="/images/logo.png" alt="FidAls" title="На главную" class="img-responsive"></a>
           <ul class="header-nav list-unstyled">
             <li class="header-nav-item"><a href="./portfolio.html" class="header-nav-link">Портфолио</a></li>
             <li class="header-nav-item"><a href="#" class="header-nav-link">Цены</a></li>
@@ -45,14 +45,14 @@
             <li class="header-nav-item"><a href="./contacts.html" class="header-nav-link">Контакты</a></li>
           </ul>
           <div class="header-contacts">
-            <p class="header-contacts-phone"><a href="tel:+77777777777" class="header-contacts-link">+7 (000) 000-00-00</a></p>
-            <p class="header-contacts-email"><a href="mailto:info@fidals.ru" class="header-contacts-link">info@fidals.ru</a></p>
+            <p class="header-contacts-item header-contacts-phone"><i class="fa fa-phone"></i><a href="tel:+77777777777" class="header-contacts-link">+7 (000) 000-00-00</a></p>
+            <p class="header-contacts-item header-contacts-email"><i class="fa fa-envelope"></i><a href="mailto:info@fidals.ru" class="header-contacts-link">info@fidals.ru</a></p>
           </div>
         </div>
       </div>
       <div class="content">
         <div class="container">
-          <div class="skills">
+          <div class="skills-section">
             <div class="row">
               <div class="col-sm-4">
                 <div class="skills-item"><img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97177&amp;w=318&amp;h=177" class="img-responsive">
@@ -92,7 +92,7 @@
               </div>
             </div>
           </div>
-          <div class="speech">
+          <div class="speech-section">
             <div class="row">
               <div class="col-md-6">
                 <div class="speech-item clearfix">
@@ -138,8 +138,8 @@
               </div>
             </div>
           </div>
-          <div class="infographic"><img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Инфографика&amp;w=1140&amp;h=200" class="img-responsive"></div>
-          <div class="prices">
+          <div class="infographic-section"><img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Инфографика&amp;w=1140&amp;h=200" class="img-responsive"></div>
+          <div class="prices-section">
             <div class="text-title-wrapper">
               <h2 class="prices-title text-title text-center">Цены</h2>
               <h4 class="prices-subtitle text-center">откуда берутся и как мы их считаем</h4>
@@ -175,7 +175,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio">
+          <div class="portfolio-section">
             <div class="text-title-wrapper">
               <h2 class="portfolio-title text-title text-center">Портфолио</h2>
             </div>

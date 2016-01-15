@@ -353,7 +353,7 @@ html.mm-blocking #mm-blocker {
   display: none;
   position: fixed; }
 .mm-menu.mm-current {
-  display: block; }
+  display: block !important; }
 
 .mm-menu {
   width: 80%;

@@ -20,11 +20,11 @@ html
 
 	body(class="#{bodyClass}")
 		.page-wrapper
-			.header
+			.header#header
 				block header
 					.container.header-container
 						a(class="header-toggle-menu", href="#menu")
-						nav#menu
+						nav#menu(style="display: none")
 							ul
 								li
 									a(href='/') Главная
@@ -56,7 +56,7 @@ html
 									a(href='#') Контакты
 
 						a(class="header-logo-link", href="/", rel="nofollow")
-							img(class="img-responsive" src="/images/logo.jpg" alt="FidAls" title="На главную")
+							img(class="img-responsive" src="/images/logo.png" alt="FidAls" title="На главную")
 
 						ul.header-nav.list-unstyled
 							li.header-nav-item
@@ -73,15 +73,17 @@ html
 								a(class="header-nav-link", href="./contacts.html") Контакты
 
 						.header-contacts
-							p.header-contacts-phone
+							p.header-contacts-item.header-contacts-phone
+								i(class="fa fa-phone")
 								a(class="header-contacts-link" href="tel:+77777777777") +7 (000) 000-00-00
-							p.header-contacts-email
+							p.header-contacts-item.header-contacts-email
+								i(class="fa fa-envelope")
 								a(class="header-contacts-link" href="mailto:info@fidals.ru") info@fidals.ru
 
 			.content
 				block content
 					.container
-						.skills
+						.skills-section
 							.row
 								.col-sm-4
 									.skills-item
@@ -114,7 +116,7 @@ html
 											li.skills-list-item Maloq
 											li.skills-list-item Gist
 
-						.speech
+						.speech-section
 							.row
 								.col-md-6
 									.speech-item.clearfix
@@ -159,10 +161,10 @@ html
 										p.speech-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 
-						.infographic
+						.infographic-section
 							img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Инфографика&w=1140&h=200")
 
-						.prices
+						.prices-section
 							.text-title-wrapper
 								h2.prices-title.text-title.text-center Цены
 								h4.prices-subtitle.text-center откуда берутся и как мы их считаем
@@ -196,7 +198,7 @@ html
 										p.prices-item-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 
-						.portfolio
+						.portfolio-section
 							.text-title-wrapper
 								h2.portfolio-title.text-title.text-center Портфолио
 

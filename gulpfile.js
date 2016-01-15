@@ -18,6 +18,7 @@ var gulp         = require('gulp'),
 // ================================================================
 var htmlFile         = "index",
 	styleFile        = "common/styles",
+	// styleFile        = "pages/portfolio",
 	img_folder       = "./dist/images/",
 
 	src_sass_folder  = "./src/scss/",

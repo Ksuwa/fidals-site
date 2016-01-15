@@ -3,6 +3,7 @@
 // ================================================================
 @import "reset.scss";
 @import "../libs/bootstrap.scss";
+@import "../libs/font-awesome.scss";
 @import "variables.scss";
 @import "mixins/mixins.scss";
 @import "mixins/placeholders.scss";
@@ -29,17 +30,21 @@ body {
 .page-wrapper {
 	min-height: 100%;
 	margin-bottom: -$footer-height;
-}
 
-.page-wrapper:after {
-	content: "";
-	display: block;
+	&:after {
+		content: "";
+		display: block;
+	}
 }
 
 .footer,
 .page-wrapper:after {
 	// "push" must be the same height as footer
 	height: $footer-height;
+}
+
+.content {
+	margin-top: 125px;
 }
 
 .text-title {
@@ -51,14 +56,34 @@ body {
 	}
 }
 
+.mm-opened {
+	.header {
+		position: static;
+	}
+
+	.content {
+		margin-top: 50px;
+	}
+}
+
+@include bp(max-width, 991px) {
+	.mm-menu {
+		display: none;
+	}
+}
+
 // ================================================================
 // Header
 // ================================================================
 .header {
-	background: $c-black;
+	background: $c-header-bg;
 	color: $c-white;
-	margin: 0 0 50px;
-	min-height: $header-height;
+	height: $header-height;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
 
 	&-inner {
 		margin: 0 auto;
@@ -82,9 +107,8 @@ body {
 	}
 
 	&-logo-link {
-		margin: 0 70px 0 0;
-		padding: 10px 0;
-		width: 55px;
+		margin: -2px 70px 0 0;
+		width: 70px;
 	}
 
 	&-nav {
@@ -124,21 +148,26 @@ body {
 	&-contacts {
 		float: right;
 		padding: 10px 0 0;
-		text-align: right;
-
-		&-phone {
-		}
-
-		&-email {
-		}
 
 		&-link {
 			color: $c-nav-link;
+			padding: 0 0 0 10px;
 		}
 
 		&-link:hover {
 			color: $c-white;
+			padding: 0 0 0 10px;
 			text-decoration: none;
+		}
+	}
+
+	&-contacts-item {
+		.fa {
+			color: $c-nav-link;
+		}
+
+		&:hover .fa {
+			color: $c-white;
 		}
 	}
 
@@ -235,7 +264,9 @@ body {
 // Skills section
 // ================================================================
 .skills {
-	@extend %section-border;
+	&-section {
+		@extend %section-border;
+	}
 
 	&-item {
 		@extend %box-grey;
@@ -261,7 +292,9 @@ body {
 // Speech section
 // ================================================================
 .speech {
-	@extend %section-border;
+	&-section {
+		@extend %section-border;
+	}
 
 	&-img-wrapper {
 		float: left;
@@ -293,14 +326,18 @@ body {
 // Infographic section
 // ================================================================
 .infographic {
-	@extend %section-border;
+	&-section {
+		@extend %section-border;
+	}
 }
 
 // ================================================================
 // Infographic section
 // ================================================================
 .prices {
-	@extend %section-border;
+	&-section {
+		@extend %section-border;
+	}
 
 	&-img-wrapper {
 		float: left;
@@ -312,7 +349,15 @@ body {
 // Portfolio section
 // ================================================================
 .portfolio {
-	margin-bottom: 50px;
+	&-section {
+		@extend %section-border;
+	}
+
+	&-item {
+		@extend %box-transparent;
+		min-height: 364px;
+		max-width: 290px;
+	}
 
 	&-item-title {
 		@extend %box-title;

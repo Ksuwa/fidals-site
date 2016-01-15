@@ -1,7 +1,8 @@
 $(function () {
 	$('.fancybox').fancybox({
+		type       : 'image', // to open placeholder images in fancybox;
 		openEffect : 'elastic',
-		openSpeed  : 150,
+		openSpeed  : 100,
 
 		overlay : {
 			css : {
@@ -11,7 +12,7 @@ $(function () {
 
 		closeClick  : true,
 		closeEffect : 'elastic',
-		closeSpeed  : 150,
+		closeSpeed  : 100,
 
 		helpers: {
 			title: {
