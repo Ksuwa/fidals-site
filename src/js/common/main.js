@@ -7,9 +7,6 @@
 		 * Метод инициализации.
 		 */
 		initialize : function() {
-			this.$header     = $('#header');
-			this.headeHeight = this.$header.height();
-
 			/**
 			 * Плагин меню для мобильных устройств.
 			 */
@@ -45,17 +42,9 @@
 		 * Метод установки слушателей.
 		 */
 		setUpListeners: function() {
-			// $(document).on("scroll", this.fixHeader);
+			// $(document).on("scroll", this.someMethod);
 			// $("#input-text").on("keyup", $.proxy(this.textChange, this));
-		},
-
-		// fixHeader: function() {
-		// 	if ($(this).scrollTop() > mainPage.headeHeight) {
-		// 		mainPage.$header.addClass("fixed");
-		// 	} else {
-		// 		mainPage.$header.removeClass("fixed");
-		// 	}
-		// }
+		}
 	};
 
 	/**
