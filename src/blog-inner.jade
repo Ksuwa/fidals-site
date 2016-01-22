@@ -1,0 +1,40 @@
+extends ./index.jade
+
+block vars
+	- var title = "FidAls | Блоги";
+	- var bodyClass = "blog";
+
+block append styles
+	link(rel="stylesheet", href="css/blog.css")
+
+block content
+	.container
+		.text-title-wrapper
+			h1.text-title Блоги
+
+		.row
+			.col-lg-8
+				.blogs-wrapper
+					.blog-item
+						a(class="blog-item-link" href="#")
+							| One API to rule all product data
+
+						p.blog-item-text
+							| Liip was approached by Migros, the largest retail company in Switzerland. Their challenge was that their product data is managed in several large enterprise systems and databases that are not suitable for real-time access.
+
+						p.blog-item-text
+							| Migros has various websites and a mobile application that all need to query data. Liip built the M-API, a Symfony application that gathers the data from the various systems, cleans it up and indexes it with Elasticsearch. This index can be queried in real time through a convenient REST API with JSON and XML output.
+
+						p.blog-item-data.clearfix
+							i(class="fa fa-calendar-check-o")
+							span.blog-item-date 25.01.2016
+							i(class="fa fa-commenting-o")
+							span.blog-item-comments 1 Комментарий
+
+							a(class="blog-item-btn-more btn btn-primary" href="#") Подробнее
+
+			.col-lg-4
+				include _sidebar-right.jade
+
+block append scripts
+	script(src='js/pages/blogs.js')

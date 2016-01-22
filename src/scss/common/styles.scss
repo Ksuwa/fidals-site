@@ -53,9 +53,18 @@ body {
 	@extend %title-border;
 
 	&-wrapper {
-		margin-bottom: 50px;
+		margin-bottom: 45px;
 		text-align: center;
 	}
+}
+
+.title-main {
+	font-size: $f-size-base;
+	margin: -30px auto 15px;
+}
+
+.img-center {
+	margin: 0 auto;
 }
 
 .mm-opened {
@@ -297,6 +306,14 @@ body {
 
 	&-item-title {
 		@extend %box-title;
+		color: $c-grey-title-border;
+		min-height: 76px;
+	}
+
+	&-item-link {
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	&-list-item {
@@ -323,12 +340,14 @@ body {
 		@extend %box-grey;
 	}
 
-	&-img-wrapper {
-		float: left;
-		margin: 0 25px 10px 0;
+	&-item-link {
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
-	&-title {
+	&-item-title {
+		color: $c-grey-title-border;
 		font-weight: bold;
 		line-height: 140%;
 		margin-top: 0;
@@ -336,29 +355,31 @@ body {
 
 	&-item {
 		margin-bottom: 30px;
-		min-height: 240px;
+		min-height: 250px;
 	}
 
 	&-text {
 		line-height: 160%;
 	}
 
+	@include bp(min-width, 485px) {
+		&-img-wrapper {
+			float: left;
+			margin: 0 25px 10px 0;
+		}
+	}
+
 	@include dev(pc) {
-		.col-md-6:last-child .speech-item,
-		.col-md-6:nth-last-child(2) .speech-item {
+		&-section .col-md-4:last-child .speech-item,
+		&-section .col-md-4:nth-last-child(2) .speech-item {
 			margin-bottom: 0;
 		}
 	}
 
 	@include bp(min-width, 992px, max-width, 1199px) {
 		&-title {
-			min-height: 50px;
-		}
-	}
-
-	@include bp(min-width, 992px, max-width, 1199px) {
-		&-title {
 			float: left;
+			min-height: 50px;
 			width: 100%;
 		}
 	}
@@ -417,9 +438,14 @@ body {
 
 	&-item {
 		@extend %box-transparent;
+		@include trans;
 		margin: 0 auto 30px;
 		max-width: 290px;
 		min-height: 364px;
+
+		&:hover {
+			border-color: $c-box-border-hover;
+		}
 
 		&-last {
 			margin-bottom: 0;

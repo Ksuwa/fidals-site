@@ -229,7 +229,7 @@
 
 .office, .contacts-info {
   border-bottom: 1px solid #D2D6D5;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
   padding-bottom: 60px; }
 
 .office-list-item {
@@ -237,17 +237,20 @@
   list-style: circle inside;
   padding: 5px 0; }
 
-.contacts-map {
-  margin-bottom: 15px;
+[id^="ymaps"] {
   min-height: 400px; }
 
+.contacts-map {
+  margin-bottom: 15px; }
+
 .contacts-phones {
-  float: right;
-  font-size: 24px; }
-  .contacts-phones-link {
-    padding: 0 5px 0 0; }
-  .contacts-phones-item {
-    margin-bottom: 15px; }
+  font-size: 20px; }
+  .contacts-phones p {
+    font-size: 16px; }
+
+@media only screen and (min-width: 1200px) {
+  .contacts-phones {
+    float: right; } }
 
 .office-item-title {
   font-weight: bold;

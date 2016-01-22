@@ -20,6 +20,18 @@
 	margin-top: 15px;
 }
 
+%link-green {
+	border-bottom: 1px solid transparent;
+	-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+
+	&:hover {
+		border-color: #3C948B;
+		color: $c-blog-title;
+		text-decoration: none;
+	}
+}
+
 %list-flex {
 	display: -webkit-flex;
 	display: 		 flex;
@@ -34,12 +46,13 @@
 
 %section-border {
 	border-bottom: 1px solid $c-section-border;
-	margin-bottom: 60px;
+	margin-bottom: 65px;
 	padding-bottom: 60px;
 }
 
 %title-border {
 	display: inline-block;
+	margin-bottom: 0;
 	position: relative;
 
 	&:after {

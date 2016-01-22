@@ -16,9 +16,9 @@ var gulp         = require('gulp'),
 // ================================================================
 // PATHS
 // ================================================================
-var htmlFile         = "index",
-	styleFile        = "common/styles",
-	// styleFile        = "pages/portfolio",
+var htmlFile         = "blog-inner",
+	//styleFile        = "common/styles",
+	styleFile        = "pages/blog",
 	img_folder       = "./dist/images/",
 
 	src_sass_folder  = "./src/scss/",

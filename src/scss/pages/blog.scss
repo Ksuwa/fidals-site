@@ -1,7 +1,6 @@
 // ================================================================
 // Imports
 // ================================================================
-@import "../libs/jquery.fancybox.scss";
 @import "../common/variables.scss";
 @import "../common/mixins/mixins.scss";
 @import "../common/mixins/placeholders.scss";
@@ -11,63 +10,56 @@
 // ================================================================
 
 // ================================================================
-// Contacts page
+// Blog page
 // ================================================================
 [id^="ymaps"] {
 	min-height: 400px;
 }
 
-.contacts {
-	&-map {
-		margin-bottom: 15px;
-	}
+.blog {
+	&-item {
+		border-bottom: 1px solid $c-section-border;
+		margin-bottom: 45px;
+		padding-bottom: 45px;
 
-	&-phones {
-		font-size: $f-size-base + 6;
-
-		p {
-			font-size: $f-size-base + 2;
+		&-link {
+			@extend %link-green;
+			display: inline-block;
+			color: $c-blog-title;
+			font-size: $f-size-base + 10;
+			margin-bottom: 20px;
 		}
-	}
 
-	@include bp(min-width, 1200px) {
-		&-phones {
+		&-text {
+			line-height: 170%;
+			margin-bottom: 20px;
+		}
+
+		&-date,
+		&-comments {
+			margin-right: 10px;
+			padding: 0 5px;
+		}
+
+		&-btn-more {
 			float: right;
 		}
 	}
 }
 
-.office {
-	@extend %section-border;
+.sidebar {
+	&-tags,
+	&-article {
+		@extend %box-transparent;
+		@include trans;
+		margin: 0 auto 50px;
 
-	&-item {
-		@extend %box-grey;
-	}
+		&:hover {
+			border-color: $c-box-border-hover;
+		}
 
-	&-item-title {
-		font-weight: bold;
-		margin-top: 15px;
-	}
-
-	&-list-item {
-		@extend %list-item-circle;
-	}
-}
-
-.contacts-info {
-	@extend %section-border;
-
-	&-img-wrapper {
-		float: left;
-		margin: 0 25px 10px 0;
-	}
-
-	&-title {
-		font-weight: bold;
-		margin-top: 0;
-	}
-
-	&-text {
-		line-height: 160%;
+		&-title {
+			margin-top: 0;
+		}
 	}
 }

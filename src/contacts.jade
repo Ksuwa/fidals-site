@@ -10,44 +10,42 @@ block append styles
 block content
 	.container
 		.contacts-wrapper
+			h1.prices-title.text-center Контакты
 			.text-title-wrapper
-				h2.prices-title.text-title.text-center Контакты
-				h3.text-center Адрес и телефоны
+				h2.text-title Адрес и телефоны
+
 			.row
-				.col-md-8
+				.col-lg-9
 					.contacts-map
-						script(type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=yB5JvhXyVEvTvtPEQ_C2mJU0SlMF0sGM&width=750&height=400&lang=ru_RU&sourceType=constructor")
+						script(type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=yB5JvhXyVEvTvtPEQ_C2mJU0SlMF0sGM&lang=ru_RU&sourceType=constructor")
 
 					p.contacts-map-text
 						| просп. Елизарова, 38, литера А
 
-				.col-md-4
+				.col-lg-3
 					.contacts-phones
-						p.contacts-phones-item
-							a(class="contacts-phones-link" href="tel:+79210000000")
-								| +7-921-000-00-00
-							span
-								| Андрей, <br>
-								| Руководитель команды
+						a(class="contacts-phones-link" href="tel:+79210000000")
+							| +7-921-000-00-00
+						p
+							| Андрей :
+							| Руководитель команды
 
-						p.contacts-phones-item
-							a(class="contacts-phones-link" href="tel:+79210000000")
-								| +7-921-000-00-00
-							span
-								| Мария, <br>
-								| Работа с клиентами, <br>
-								| любые вопросы
+						a(class="contacts-phones-link" href="tel:+79210000000")
+							| +7-921-000-00-00
+						p
+							| Мария:
+							| Работа с клиентами, любые вопросы
 
-						p.contacts-phones-item
-							a(class="contacts-phones-link" href="tel:+79210000000")
-								| +7-921-000-00-00
-							span
-								| Лиза, <br>
-								| Менеджер проектов
+						a(class="contacts-phones-link" href="tel:+79210000000")
+							| +7-921-000-00-00
+						p
+							| Лиза :
+							| Менеджер проектов
 
 		.office
 			.text-title-wrapper
-				h3.text-center Офис
+				h2.text-title Офис
+
 			.row
 				.col-md-4
 					.office-item
@@ -79,14 +77,14 @@ block content
 					.contacts-info-item.clearfix
 						.contacts-info-img-wrapper
 							img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-						h4.contacts-info-title Вакансии
+						h3.contacts-info-title Вакансии
 						p.contacts-info-text
 							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fugiat deleniti rem rerum veritatis. Unde ad, iste a repellat autem numquam voluptatum dolorum veniam. Qui rerum at ullam? Expedita, nostrum?
 				.col-md-6
 					.contacts-info-item.clearfix
 						.contacts-info-img-wrapper
 							img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-						h4.contacts-info-title Бизнесу
+						h3.contacts-info-title Бизнесу
 						p.contacts-info-text
 							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 

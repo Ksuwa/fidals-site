@@ -29,7 +29,7 @@ html
 								li
 									a(href='/') Главная
 								li
-									a(href='./portfolio') Портфолио
+									a(href='./portfolio.html') Портфолио
 								li
 									a(href='#') Цены
 								li
@@ -51,26 +51,26 @@ html
 								li
 									a(href='#') Вакансии
 								li
-									a(href='#') Блог
+									a(href='./blog.html') Блог
 								li
-									a(href='#') Контакты
+									a(href="./contacts.html") Контакты
 
 						a(class="header-logo-link", href="/", rel="nofollow")
 							img(class="img-responsive" src="/images/logo.png" alt="FidAls" title="На главную")
 
 						ul.header-nav.list-unstyled
 							li.header-nav-item
-								a(class="header-nav-link", href="./portfolio.html") Портфолио
+								a(class="header-nav-link" href="./portfolio.html") Портфолио
 							li.header-nav-item
-								a(class="header-nav-link", href="#") Цены
+								a(class="header-nav-link" href="#") Цены
 							li.header-nav-item
-								a(class="header-nav-link", href="#") Команда
+								a(class="header-nav-link" href="#") Команда
 							li.header-nav-item
-								a(class="header-nav-link", href="#") Вакансии
+								a(class="header-nav-link" href="#") Вакансии
 							li.header-nav-item
-								a(class="header-nav-link", href="#") Блог
+								a(class="header-nav-link" href="./blog.html") Блог
 							li.header-nav-item
-								a(class="header-nav-link", href="./contacts.html") Контакты
+								a(class="header-nav-link" href="./contacts.html") Контакты
 
 						.header-contacts
 							p.header-contacts-item.header-contacts-phone
@@ -83,12 +83,16 @@ html
 			.content
 				block content
 					.container
+						h1.title-main.text-center Команда Fidals
+
 						.skills-section
 							.row
 								.col-sm-4
 									.skills-item
-										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
-										h4.skills-item-title Разрабатываем ТЗ
+										a(href="#")
+											img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
+										a(class="skills-item-link" href="#")
+											h3.skills-item-title Разрабатываем ТЗ
 										ul.skills-list.list-unstyled
 											li.skills-list-item Lorem
 											li.skills-list-item Ipsum
@@ -97,8 +101,10 @@ html
 											li.skills-list-item Gist
 								.col-sm-4
 									.skills-item
-										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
-										h4.skills-item-title Реализуем проекты на Symfony
+										a(href="#")
+											img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
+										a(class="skills-item-link" href="#")
+											h3.skills-item-title Реализуем проекты на Symfony
 										ul.skills-list.list-unstyled
 											li.skills-list-item Lorem
 											li.skills-list-item Ipsum
@@ -107,8 +113,10 @@ html
 											li.skills-list-item Gist
 								.col-sm-4
 									.skills-item
-										img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
-										h4.skills-item-title Создаём бизнесс-процессы
+										a(href="#")
+											img(class="img-responsive", src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97177&w=318&h=177")
+										a(class="skills-item-link" href="#")
+											h3.skills-item-title Создаём бизнесс-процессы
 										ul.skills-list.list-unstyled
 											li.skills-list-item Lorem
 											li.skills-list-item Ipsum
@@ -121,48 +129,66 @@ html
 								.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
-											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-										h4.speech-title Программистам
+											a(href="")
+												img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+
+										a(class="speech-item-link" href="#")
+											h3.speech-item-title Программистам
 										p.speech-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fugiat deleniti rem rerum veritatis. Unde ad, iste a repellat autem numquam voluptatum dolorum veniam. Qui rerum at ullam? Expedita, nostrum?
 
 								.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
-											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-										h4.speech-title Малому бизнесу
+											a(href="")
+												img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+
+										a(class="speech-item-link" href="#")
+											h3.speech-item-title Малому бизнесу
 										p.speech-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 
 								.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
-											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-										h4.speech-title Коллегам - студии, dev-teams
+											a(href="")
+												img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+
+										a(class="speech-item-link" href="#")
+											h3.speech-item-title Коллегам - студии, dev-teams
 										p.speech-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 
 								.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
-											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-										h4.speech-title Стартапам
+											a(href="")
+												img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+
+										a(class="speech-item-link" href="#")
+											h3.speech-item-title Стартапам
 										p.speech-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 
 								.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
-											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-										h4.speech-title Инвесторам
+											a(href="")
+												img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+
+										a(class="speech-item-link" href="#")
+											h3.speech-item-title Инвесторам
 										p.speech-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 
 								.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
-											img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
-										h4.speech-title Поддержка - готовым проектам
+											a(href="")
+												img(class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97150&w=250&h=150")
+
+										a(class="speech-item-link" href="#")
+											h3.speech-item-title Поддержка - готовым проектам
 										p.speech-text
 											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusamus vero laboriosam eveniet facere hic, explicabo. Quia, officia quaerat quos obcaecati nisi expedita quod maxime facere ipsa iste aliquam praesentium.
 
