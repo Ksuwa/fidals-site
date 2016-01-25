@@ -18,6 +18,7 @@ var gulp         = require('gulp'),
 // PATHS
 // ================================================================
 var htmlFile         = 'blog-inner',
+//var	htmlFile         = 'index',
 	//styleFile        = 'common/styles',
 	styleFile        = 'pages/blog',
 	img_folder       = './dist/images/',

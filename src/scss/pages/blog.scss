@@ -45,14 +45,22 @@
 			float: right;
 		}
 	}
+
+	@include dev(mob) {
+		&-item-btn-more {
+			display: block;
+			float: none;
+			margin: 25px auto 0;
+			max-width: 200px;
+		}
+	}
 }
 
 .sidebar {
 	&-tags,
 	&-article {
 		@extend %box-transparent;
-		@include trans;
-		margin: 0 auto 50px;
+		margin: 0 0 20px;
 
 		&:hover {
 			border-color: $c-box-border-hover;
@@ -62,4 +70,38 @@
 			margin-top: 0;
 		}
 	}
+
+	@include bp(min-width, 768px) {
+		&-tags,
+		&-article {
+			margin: 0 auto 40px;
+		}
+	}
+}
+
+.blog-inner {
+	&-title {
+		margin-bottom: 25px;
+	}
+
+	&-subtitle {
+		font-weight: bold;
+		margin: 35px 0 20px;
+	}
+
+	&-tags {
+		margin: 20px 0;
+	}
+
+	&-tags-item {
+		display: inline-block;
+	}
+
+	.img-responsive {
+		margin-bottom: 20px;
+	}
+}
+
+.share-widget {
+	margin: 20px auto;
 }

@@ -59,8 +59,8 @@ body {
 }
 
 .title-main {
-	font-size: $f-size-base;
-	margin: -30px auto 15px;
+	font-size: $f-size-base + 15;
+	margin: -10px auto -15px;
 }
 
 .img-center {
@@ -118,8 +118,9 @@ body {
 	}
 
 	&-logo-link {
-		margin: -2px 70px 0 0;
-		width: 70px;
+		margin: 0 70px 0 0;
+		padding: 10px 0 0;
+		width: 60px;
 	}
 
 	&-nav {
@@ -307,7 +308,6 @@ body {
 	&-item-title {
 		@extend %box-title;
 		color: $c-grey-title-border;
-		min-height: 76px;
 	}
 
 	&-item-link {
@@ -324,6 +324,19 @@ body {
 		&-item {
 			margin: 0 auto 35px;
 			max-width: 320px;
+		}
+	}
+
+	@include bp(max-width, 991px) {
+		&-item-title {
+			font-size: $f-size-base + 3;
+		}
+	}
+
+	@include bp(min-width, 992px) {
+		&-item-title {
+			font-size: $f-size-base + 10;
+			min-height: 76px;
 		}
 	}
 }
@@ -355,14 +368,17 @@ body {
 
 	&-item {
 		margin-bottom: 30px;
-		min-height: 250px;
 	}
 
 	&-text {
 		line-height: 160%;
 	}
 
-	@include bp(min-width, 485px) {
+	&-img-wrapper {
+		margin: 0 0 10px;
+	}
+
+	@include bp(min-width, 768px) {
 		&-img-wrapper {
 			float: left;
 			margin: 0 25px 10px 0;
@@ -381,6 +397,12 @@ body {
 			float: left;
 			min-height: 50px;
 			width: 100%;
+		}
+	}
+
+	@include bp(min-width, 992px) {
+		&-item {
+			min-height: 250px;
 		}
 	}
 
