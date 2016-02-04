@@ -4,3 +4,4 @@ dist/**/*.html
 dist/**/*.js
 dist/**/*.css
 *.css.map
+.idea/**/*
