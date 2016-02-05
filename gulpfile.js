@@ -5,6 +5,7 @@ var gulp         = require('gulp'),
 	jade         = require('gulp-jade'),
 	sass         = require('gulp-sass'),
 	clean        = require('gulp-clean');
+	chmod        = require('gulp-chmod');
 	sourcemaps   = require('gulp-sourcemaps'),
 	combineMedia = require('gulp-combine-mq'),
 	rename       = require('gulp-rename'),
@@ -120,6 +121,8 @@ gulp.task('css-build', function() {
 // ================================================================
 gulp.task('js-build', function() {
 	return gulp.src( './src/js/**/*' )
+		.pipe( chmod(772) )
+		
 		.pipe( gulp.dest( './dist/js' ) );
 });
 
@@ -195,6 +198,8 @@ gulp.task('css', function() {
 // ================================================================
 gulp.task('js', function() {
 	return gulp.src( './src/js/**/*' )
+		.pipe( chmod(772) )
+
 		.pipe( gulp.dest( './dist/js' ) );
 });
 
