@@ -1,7 +1,5 @@
 dev-stuff
 node_modules/
-dist/**/*.html
-dist/**/*.js
-dist/**/*.css
+dist/
 *.css.map
-.idea/**/*
+.idea/
