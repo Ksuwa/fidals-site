@@ -13,7 +13,8 @@
 // Vars
 // ================================================================
 $header-height : 75px;
-$footer-height : 310px;
+//$footer-height : 310px; - расскоментируй, когда появится Подвал
+$footer-height : 65px;
 
 // ================================================================
 // Common
@@ -25,6 +26,7 @@ html, body, .mm-page {
 body {
 	background: $c-grey-background;
 	font-family: "Open Sans", sans-serif;
+	font-size: $f-size-base;
 }
 
 @include bp(min-width, 992px) {
@@ -59,7 +61,7 @@ body {
 }
 
 .title-main {
-	font-size: $f-size-base + 15;
+	font-size: $f-size-base + 13;
 	margin: -10px auto -15px;
 }
 
@@ -159,7 +161,7 @@ body {
 	}
 
 	&-contacts {
-		font-size: $f-size-base + 2;
+		font-size: $f-size-base;
 		float: right;
 		padding: 10px 0 0;
 
@@ -223,10 +225,6 @@ body {
 		&-toggle-menu {
 			display: none;
 		}
-
-		&-contacts {
-			font-size: $f-size-base;
-		}
 	}
 }
 
@@ -251,6 +249,7 @@ body {
 		border-bottom: 1px solid transparent;
 		color: $c-green-links;
 		display: inline-block;
+		margin: 0;
 		position: relative;
 
 		&:after {
@@ -330,13 +329,17 @@ body {
 
 	@include bp(max-width, 991px) {
 		&-item-title {
-			font-size: $f-size-base + 3;
+			font-size: $f-size-base + 1;
 		}
 	}
 
 	@include bp(min-width, 992px) {
+		&-item {
+			min-height: 445px;
+		}
+
 		&-item-title {
-			font-size: $f-size-base + 10;
+			font-size: $f-size-base + 8;
 			min-height: 76px;
 		}
 	}
@@ -403,7 +406,7 @@ body {
 	@include bp(min-width, 1200px) {
 		&-item {
 			margin-bottom: 40px;
-			min-height: 530px;
+			min-height: 542px;
 		}
 	}
 }
@@ -461,8 +464,7 @@ body {
 		@extend %box-transparent;
 		@include trans;
 		margin: 0 auto 30px;
-		max-width: 290px;
-		min-height: 364px;
+		min-height: 445px;
 
 		&:hover {
 			border-color: $c-box-border-hover;
@@ -479,10 +481,20 @@ body {
 
 	&-img-wrapper {
 		margin: 0 0 10px;
+
+		.img-responsive {
+			margin: 0 auto;
+		}
 	}
 
 	&-list-item {
 		@extend %list-item-circle;
+	}
+
+	@include bp(max-width, 767px) {
+		&-item {
+			max-width: 290px;
+		}
 	}
 
 	@include bp(min-width, 992px) {

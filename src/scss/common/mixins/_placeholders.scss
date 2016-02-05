@@ -16,7 +16,7 @@
 
 %box-title {
 	font-weight: bold;
-	line-height: 160%;
+	line-height: 150%;
 	margin-top: 15px;
 }
 
@@ -70,6 +70,7 @@
 
 %list-item-circle {
 	display: list-item;
+	font-size: $f-size-base - 1;
 	list-style: circle;
 	margin: 0 0 0 20px;
 	padding: 5px 0 0;

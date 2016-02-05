@@ -17,8 +17,8 @@ var gulp         = require('gulp'),
 // ================================================================
 // PATHS
 // ================================================================
-var htmlFile         = 'contacts',
-//var	htmlFile         = 'index',
+//var htmlFile         = 'contacts',
+var	htmlFile         = 'index',
 	styleFile        = 'common/styles',
 	//styleFile        = 'pages/blog',
 	img_folder       = './dist/images/',
@@ -30,7 +30,6 @@ var htmlFile         = 'contacts',
 	src_js_folder    = './src/js/',
 
 	jade_file        = src_html_folder + htmlFile  + '.jade',
-	html_file        = src_html_folder + htmlFile  + '.html',
 	sass_file        = src_sass_folder + styleFile + '.scss',
 	css_file         = dist_css_folder + styleFile + '.css';
 

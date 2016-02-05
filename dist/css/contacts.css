@@ -234,6 +234,7 @@
 
 .contacts-info-list-item, .office-list-item {
   display: list-item;
+  font-size: 15px;
   list-style: circle;
   margin: 0 0 0 20px;
   padding: 5px 0 0; }
