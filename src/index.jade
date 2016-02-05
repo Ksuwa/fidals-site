@@ -1,6 +1,10 @@
 block vars
 	- var title = "Разработка | Фидалс";
 	- var bodyClass = "";
+	- var selectedLink = 'Главная';
+
+block menuItems
+	- var menuItems = { 'Главная': '/', 'Проекты': '/portfolio.html', 'Контакты': '/contacts.html' };
 
 doctype html
 html
@@ -48,44 +52,23 @@ html
 						a(class="header-toggle-menu", href="#menu")
 						nav#menu(style="display: none")
 							ul
-								li
-									a(href='/') Главная
-								li
-									a(href='./portfolio.html') Проекты
-								//
+								each val, key in menuItems
 									li
-										a(href='#') Цены
-									li
-										a(href='#') Команда
-										ul
-											li
-												a(href='#') История
-											li
-												a(href='#') Члены команды
-												ul
-													li
-														a(href='#') Руководитель
-													li
-														a(href='#') Менеджер проектов
-													li
-														a(href='#') Сантехник
-											li
-												a(href='#') Фото офиса
-									li
-										a(href='#') Вакансии
-									li
-										a(href='./blog.html') Блог
-								li
-									a(href="./contacts.html") Контакты
+										if key === selectedLink
+											a.active(href=val)= key
+										else
+											a(href=val)= key
 
 						a(class="header-logo-link", href="/", rel="nofollow")
 							img(class="img-responsive" src="/images/logo.jpg" alt="FidAls" title="На главную")
 
 						ul.header-nav.list-unstyled
-							li.header-nav-item
-								a(class="header-nav-link" href="./portfolio.html") Проекты
-							li.header-nav-item
-								a(class="header-nav-link" href="./contacts.html") Контакты
+							each val, key in menuItems
+								li.header-nav-item
+									if key === selectedLink
+										a.header-nav-link.active(href=val)= key
+									else
+										a.header-nav-link(href=val)= key
 
 						.header-contacts
 							p.header-contacts-item.header-contacts-phone
@@ -106,7 +89,7 @@ html
 								.col-sm-4
 									.skills-item
 										a(href="#")
-											img(class="img-responsive", src="/images/main-page/1.png")
+											img(class="img-responsive", src="/images/main-page/1.jpg")
 										a(class="skills-item-link" href="#")
 											h3.skills-item-title Разрабатываем ТЗ
 										ul.skills-list.list-unstyled
@@ -117,7 +100,7 @@ html
 								.col-sm-4
 									.skills-item
 										a(href="#")
-											img(class="img-responsive", src="/images/main-page/2.png")
+											img(class="img-responsive", src="/images/main-page/2.jpg")
 										a(class="skills-item-link" href="#")
 											h3.skills-item-title Реализуем проекты на Symfony
 										ul.skills-list.list-unstyled
@@ -128,7 +111,7 @@ html
 								.col-sm-4
 									.skills-item
 										a(href="#")
-											img(class="img-responsive", src="/images/main-page/3.png")
+											img(class="img-responsive", src="/images/main-page/3.jpg")
 										a(class="skills-item-link" href="#")
 											h3.skills-item-title Создаём бизнес-процессы
 										ul.skills-list.list-unstyled
@@ -138,33 +121,33 @@ html
 											li.skills-list-item Внедряем новые процессы в бизнес
 						.speech-section
 							.row
-								.col-md-4.col-lg-6
+								.col-sm-6.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
 											a(href="#")
-												img(class="img-responsive" src="/images/main-page/4.png")
+												img(class="img-responsive" src="/images/main-page/4.jpg")
 
 										a(class="speech-item-link" href="#")
 											h3.speech-item-title Программистам - вакансия
 										p.speech-text
 											| У нас (да и не только) хронический дефицит программистов. Занимаемся вебом, пишем на php+js+фреймворки. Если ищешь команду на фуллтайм, с радостью познакомимся и обсудим условия работы у нас.
 
-								.col-md-4.col-lg-6
+								.col-sm-6.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
 											a(href="#")
-												img(class="img-responsive" src="/images/main-page/5.png")
+												img(class="img-responsive" src="/images/main-page/5.jpg")
 
 										a(class="speech-item-link" href="#")
 											h3.speech-item-title Малому бизнесу
 										p.speech-text
 											| Мы решаем проблемы с приложениями, сайтами, бизнес-процессами и маркетингом. В России у 95% малых бизнесов полный провал по этим пунктам. С нами вы можете сосредоточиться на специфике бизнеса.
 
-								.col-md-4.col-lg-6
+								.col-sm-6.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
 											a(href="#")
-												img(class="img-responsive" src="/images/main-page/6.png")
+												img(class="img-responsive" src="/images/main-page/6.jpg")
 
 										a(class="speech-item-link" href="#")
 											h3.speech-item-title Коллегам - студии, dev-teams
@@ -172,11 +155,11 @@ html
 											| Разработка - наше самое сильное место. Вы берёте на себя работу с клиентом и проектирование, мы - разработку.
 											| Умеем работать через трекеры, контроль версий и code-review.
 
-								.col-md-4.col-lg-6
+								.col-sm-6.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
 											a(href="#")
-												img(class="img-responsive" src="/images/main-page/7.png")
+												img(class="img-responsive" src="/images/main-page/7.jpg")
 
 										a(class="speech-item-link" href="#")
 											h3.speech-item-title Стартапам
@@ -184,11 +167,11 @@ html
 											| Сейчас стартапы часто связаны с технологичным проектами. У нас есть опыт в таких. Мы уже создали пару нагруженных сайтов с небольшими веб-приложениями внутри.
 											| По проектированию и технологиям нас консультируют пара инсайдеров крупных IT-компаний (аутсорс, продуктовые).
 
-								.col-md-4.col-lg-6
+								.col-sm-6.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
 											a(href="#")
-												img(class="img-responsive" src="/images/main-page/8.png")
+												img(class="img-responsive" src="/images/main-page/8.jpg")
 
 										a(class="speech-item-link" href="#")
 											h3.speech-item-title Инвесторам
@@ -196,19 +179,19 @@ html
 											| У нас есть бизнес-модели пары недорогих сервисов. Мы можем их реализовать: команда, опыт в бизнесе, в разработке, консультанты по технологиям и запуску продуктов.
 											| Если вас интересуют вложения - пишите, мы обсудим условия.
 
-								.col-md-4.col-lg-6
+								.col-sm-6.col-md-4.col-lg-6
 									.speech-item.clearfix
 										.speech-img-wrapper
 											a(href="#")
-												img(class="img-responsive" src="/images/main-page/9.png")
+												img(class="img-responsive" src="/images/main-page/9.jpg")
 
 										a(class="speech-item-link" href="#")
 											h3.speech-item-title Поддержка - готовым проектам
 										p.speech-text
 											| Если вашему проекту/приложению не нужны серьёзные улучшения, а нужны небольшие правки в любой момент, возьмём его на поддержку по цене 1500-3000 руб/час специалиста.
 
-						// .infographic-section
-						// 	img(class="img-responsive" src="" alt="Инфографика")
+						//- .infographic-section
+							//- img(class="img-responsive" src="" alt="Инфографика")
 
 						.prices-section
 							.text-title-wrapper
@@ -218,28 +201,28 @@ html
 								.col-md-6.clearfix
 									.prices-item
 										.prices-img-wrapper
-											img(class="img-responsive" src="/images/main-page/6.png")
+											img(class="img-responsive" src="/images/main-page/6.jpg")
 										h4.prices-item-title Почасовая оплата
 										p.prices-item-text
 											| Все наши цены так или иначе упираются в часы работы, что мы затратим на проект. Стоимость зависит от сложности проекта. И сложности клиента, конечно.
 								.col-md-6.clearfix
 									.prices-item
 										.prices-img-wrapper
-											img(class="img-responsive" src="/images/main-page/6.png")
+											img(class="img-responsive" src="/images/main-page/6.jpg")
 										h4.prices-item-title Работа с клиентом
 										p.prices-item-text
 											| От 30% до 80% стоимости (работы) проекта уходит на попытки понять что же нужно клиенту. Если вы хорошо представляете что вам нужно и примерно знаете о порядке цен на работу в ИТ, этот этап пройдёт для вас быстро и дешёво. Тогда проект обойдётся вам дешевле на 30-80%.
 								.col-md-6.clearfix
 									.prices-item
 										.prices-img-wrapper
-											img(class="img-responsive" src="/images/main-page/6.png")
+											img(class="img-responsive" src="/images/main-page/6.jpg")
 										h4.prices-item-title Риски
 										p.prices-item-text
 											| Риски бывают со стороны бизнеса и со стороны разработки. Суть всех рисков от бизнеса: созданный функционал не приносит денег. У разработки риски технические - в какой-то момент может оказаться, что запланированный функционал реализовать невозможно (т.е. слишком дорого). Перед разработкой проекта мы снижаем и те и другие.
 								.col-md-6.clearfix
 									.prices-item
 										.prices-img-wrapper
-											img(class="img-responsive" src="/images/main-page/6.png")
+											img(class="img-responsive" src="/images/main-page/6.jpg")
 										h4.prices-item-title Порядок оплаты
 										p.prices-item-text
 											| Не все выполняют условия оплаты добросовестно. Поэтому, при первом знакомстве, мы работаем по предоплате 50%. Всю работу мы разбиваем на этапы объёмом не более одной рабочей недели. Обычно спустя месяц мы знакомимся ближе и работаем на более свободных условиях оплаты.
@@ -286,7 +269,7 @@ html
 											li.portfolio-list-item Стандартный функционал магазина
 
 		.footer
-		//
+		//-
 			block footer
 				.footer-inner
 					.container

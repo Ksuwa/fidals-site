@@ -50,6 +50,10 @@
 	padding-bottom: 60px;
 }
 
+%paragraph-line-height {
+	line-height: 160%;
+}
+
 %title-border {
 	display: inline-block;
 	margin-bottom: 0;
@@ -66,6 +70,7 @@
 
 %list-item-circle {
 	display: list-item;
-	list-style: circle inside;
-	padding: 5px 0;
+	list-style: circle;
+	margin: 0 0 0 20px;
+	padding: 5px 0 0;
 }

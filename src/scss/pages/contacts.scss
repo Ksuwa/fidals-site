@@ -30,6 +30,12 @@
 		}
 	}
 
+	&-info-list {
+		&-item {
+			@extend %list-item-circle;
+		}
+	}
+
 	@include bp(min-width, 1200px) {
 		&-phones {
 			float: right;

@@ -3,6 +3,7 @@ extends ./index.jade
 block vars
 	- var title = "FidAls | Блоги";
 	- var bodyClass = "blog";
+	- var selectedLink = 'Блоги';
 
 block append styles
 	link(rel="stylesheet", href="css/blog.css")
@@ -68,6 +69,3 @@ block content
 
 			.col-lg-4
 				include _sidebar-right.jade
-
-block append scripts
-	//- script(src='js/pages/blog.js')

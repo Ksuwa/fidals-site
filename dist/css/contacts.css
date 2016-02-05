@@ -232,10 +232,11 @@
   margin-bottom: 65px;
   padding-bottom: 60px; }
 
-.office-list-item {
+.contacts-info-list-item, .office-list-item {
   display: list-item;
-  list-style: circle inside;
-  padding: 5px 0; }
+  list-style: circle;
+  margin: 0 0 0 20px;
+  padding: 5px 0 0; }
 
 [id^="ymaps"] {
   min-height: 400px; }

@@ -150,7 +150,8 @@ body {
 		-webkit-transition: all 0.3s ease;
 				transition: all 0.3s ease;
 
-		&:hover {
+		&:hover,
+		&.active {
 			background: $c-nav-link-bg;
 			color: $c-white;
 			text-decoration: none;
@@ -363,7 +364,7 @@ body {
 		color: $c-grey-title-border;
 		font-weight: bold;
 		line-height: 140%;
-		margin-top: 0;
+		margin-top: 13px;
 	}
 
 	&-item {
@@ -371,24 +372,23 @@ body {
 	}
 
 	&-text {
-		line-height: 160%;
+		@extend %paragraph-line-height;
 	}
 
 	&-img-wrapper {
 		margin: 0 0 10px;
 	}
 
-	@include bp(min-width, 768px) {
-		&-img-wrapper {
-			float: left;
-			margin: 0 25px 10px 0;
-		}
-	}
-
 	@include dev(pc) {
 		&-section .col-md-4:last-child .speech-item,
 		&-section .col-md-4:nth-last-child(2) .speech-item {
 			margin-bottom: 0;
+		}
+	}
+
+	@include bp(min-width, 768px, max-width, 1199px) {
+		&-item {
+			min-height: 455px;
 		}
 	}
 
@@ -400,15 +400,10 @@ body {
 		}
 	}
 
-	@include bp(min-width, 992px) {
-		&-item {
-			min-height: 250px;
-		}
-	}
-
 	@include bp(min-width, 1200px) {
 		&-item {
 			margin-bottom: 40px;
+			min-height: 530px;
 		}
 	}
 }
@@ -433,6 +428,10 @@ body {
 	&-img-wrapper {
 		float: left;
 		margin: 0 25px 10px 0;
+	}
+
+	&-item-text {
+		@extend %paragraph-line-height;
 	}
 
 	@include bp(min-width, 992px, max-width, 1199px) {
