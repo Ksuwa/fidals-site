@@ -7,5 +7,6 @@ dist/**/*.png
 dist/**/*.html
 dist/**/*.js
 dist/**/*.css
+dist/
 *.css.map
-.idea/**/*
+.idea/

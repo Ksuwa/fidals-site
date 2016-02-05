@@ -73,7 +73,7 @@ gulp.task('jade-build', function() {
 			'./src/blog.jade',
 			'./src/blog-inner.jade',
 			'./src/contacts.jade',
-			'./src/portfolio.jade'
+			'./src/projects.jade'
 		])
 		.pipe( jade({
 			pretty : true
