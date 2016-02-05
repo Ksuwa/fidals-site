@@ -43,8 +43,8 @@ gulp.task('build', function(callback) {
 		'jade-build',
 		'sass-build',
 		'css-build',
-		'js-build',
 		'img-build',
+		'js-build',
 		callback
 	);
 });
@@ -122,7 +122,7 @@ gulp.task('css-build', function() {
 gulp.task('js-build', function() {
 	return gulp.src( './src/js/**/*' )
 		.pipe( chmod(772) )
-		
+
 		.pipe( gulp.dest( './dist/js' ) );
 });
 
