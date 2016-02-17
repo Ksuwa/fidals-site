@@ -242,6 +242,15 @@
 [id^="ymaps"] {
   min-height: 400px; }
 
+.contacts-block {
+  margin-bottom: 30px; }
+
+.contacts-timing-map {
+  margin-bottom: 30px; }
+
+.contacts #ymap-canvas {
+  display: none; }
+
 .contacts-map {
   margin-bottom: 15px; }
 

@@ -18,6 +18,18 @@
 }
 
 .contacts {
+	&-block {
+		margin-bottom: 30px;
+	}
+
+	&-timing-map {
+		margin-bottom: 30px;
+	}
+
+	#ymap-canvas {
+		display: none;
+	}
+
 	&-map {
 		margin-bottom: 15px;
 	}
